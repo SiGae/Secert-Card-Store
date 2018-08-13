@@ -13,8 +13,7 @@ h = driver.page_source
 
 root = BeautifulSoup(h,'html.parser')
 a = root.find_all('ul', {'id':'congestedAreaList'})
-delay = a.splitlines('\\n')
-#print(a)
+
 for i in range(len(a)):
     delay.append(a[i].get_text())
 print(delay)
